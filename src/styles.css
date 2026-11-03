@@ -60,3 +60,23 @@ a {
 .nav-link:hover::after {
   width: 100%;
 }
+
+.hero-ticker {
+  animation: ticker 24s linear infinite;
+}
+
+@keyframes ticker {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-ticker {
+    animation-play-state: paused;
+  }
+}
