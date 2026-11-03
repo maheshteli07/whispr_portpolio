@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react'
 type Project = {
   number: string
   title: string
+  image: string
   intro: string
   category: string
   technologies: string[]
@@ -21,6 +22,7 @@ export const projects: Project[] = [
   {
     number: '01',
     title: 'Emergency Corridor Optimization Using Quantum Machine Learning',
+    image: '/projects/emergency-corridor.png',
     intro: 'An exploration of how quantum machine learning could help make emergency movement more intelligent.',
     category: 'Research / Optimization',
     technologies: ['Quantum machine learning', 'Route optimization', 'Emergency systems'],
@@ -34,21 +36,23 @@ export const projects: Project[] = [
   },
   {
     number: '02',
-    title: 'Decision Technical Project: Traffic Congestion Prediction and Ambulance Route Optimization',
-    intro: 'A practical study combining quantum machine learning with A* search for faster ambulance routing.',
-    category: 'Decision Technical Project',
-    technologies: ['Quantum machine learning', 'A* search', 'Traffic prediction'],
-    problem: 'Traffic congestion can turn a technically short route into a slow one when every minute matters.',
-    contribution: 'Worked on the idea of combining congestion prediction with A* search so that route decisions could respond to the conditions around them.',
-    process: 'The model predicts congestion as an input, then A* search uses that context to explore a more suitable route for an ambulance.',
-    challenges: 'The interesting challenge was connecting prediction and pathfinding without losing sight of the real-world decision the system needs to support.',
-    learned: 'I learned how different technical methods can become more useful when they are designed around one clear decision.',
+    title: 'Cancer Prediction System Using Random Forest',
+    image: '/projects/cancer-prediction.png',
+    intro: 'A machine learning project using a Random Forest model to predict cancer from the breast cancer dataset.',
+    category: 'Machine Learning / Classification',
+    technologies: ['Python', 'Random Forest', 'Breast cancer dataset'],
+    problem: 'Clinical datasets contain patterns that can support cancer prediction, but those patterns need to be handled carefully and translated into a useful classification workflow.',
+    contribution: 'Worked on training a Random Forest model using the breast cancer dataset to explore cancer prediction from clinical features.',
+    process: 'The workflow prepares the breast cancer dataset, trains a Random Forest classifier, and uses the learned decision patterns to predict the likely class for new input data.',
+    challenges: 'The challenge was working with clinical data responsibly while understanding how preprocessing, model choices, and evaluation affect a prediction system.',
+    learned: 'I learned how an ensemble model can combine many decision trees into one classification approach, and why model results need careful interpretation.',
     accent: 'coral',
     shape: 'blocks',
   },
   {
     number: '03',
     title: 'Hospital Operating Management System',
+    image: '/projects/hospital-management.png',
     intro: 'A digital system focused on bringing patients, doctors, and appointments into one clearer workflow.',
     category: 'Systems / Digital Operations',
     technologies: ['Patient management', 'Doctor management', 'Appointment workflows'],
@@ -63,6 +67,7 @@ export const projects: Project[] = [
   {
     number: '04',
     title: 'QR-Based Smart Retail Checkout',
+    image: '/projects/smart-retail-checkout.png',
     intro: 'An experiment in making retail checkout faster through QR-based technology.',
     category: 'Experiment / Retail Technology',
     technologies: ['QR technology', 'Retail workflows', 'Checkout experience'],
@@ -78,15 +83,11 @@ export const projects: Project[] = [
 
 function ProjectVisual({ project }: { project: Project }) {
   return (
-    <div className={`project-visual project-visual-${project.shape} relative h-64 overflow-hidden rounded-[2rem] border border-ink/20 ${project.accent === 'lime' ? 'bg-lime' : 'bg-coral'} sm:h-80`}>
-      <div className="grain absolute inset-0 opacity-20" />
-      <span className="absolute left-5 top-5 font-mono text-[9px] uppercase tracking-[0.14em]">case / {project.number}</span>
-      <span className="absolute bottom-5 right-5 font-mono text-[9px] uppercase tracking-[0.14em]">mahesh.exe</span>
-      <div className="project-shape absolute inset-0">
-        <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 font-display text-[9rem] font-semibold uppercase leading-none text-ink/10 sm:text-[12rem]">
-          {project.number}
-        </span>
-      </div>
+    <div className={`project-visual project-visual-${project.shape} group/visual relative h-64 overflow-hidden rounded-[2rem] border border-ink/20 bg-ink sm:h-80`}>
+      <img src={project.image} alt={project.title} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover/visual:scale-[1.04]" />
+      <div className="absolute inset-0 bg-gradient-to-t from-ink/65 via-transparent to-ink/10" />
+      <span className="absolute left-5 top-5 rounded-pill border border-cream/50 bg-ink/30 px-2.5 py-1 font-mono text-[9px] uppercase tracking-[0.14em] text-cream backdrop-blur-sm">case / {project.number}</span>
+      <span className="absolute bottom-5 right-5 font-mono text-[9px] uppercase tracking-[0.14em] text-cream">mahesh.exe</span>
     </div>
   )
 }
