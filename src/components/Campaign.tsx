@@ -74,8 +74,8 @@ export function Campaign() {
   const Icon = stage.icon
 
   return (
-    <section id="experiments" className="relative scroll-mt-24 border-t border-ink/20 py-20 sm:py-28 lg:py-36">
-      <div className="mb-16 flex items-start justify-between gap-6 sm:mb-24">
+    <section id="experiments" className="relative scroll-mt-24 border-t border-ink/20 py-14 sm:py-16 lg:py-24">
+      <div className="mb-12 flex items-start justify-between gap-6 sm:mb-16">
         <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-coral">08 / growth theater</p>
         <p className="max-w-[12rem] text-right font-mono text-[9px] uppercase leading-[1.4] tracking-[0.12em] text-ink/60">
           A proposed strategy.<br />No results claimed.
@@ -117,7 +117,7 @@ export function Campaign() {
         </motion.div>
       </div>
 
-      <div className="mt-24 rounded-[2rem] bg-ink p-5 text-cream sm:mt-32 sm:p-8 lg:p-12">
+      <div className="mt-16 rounded-[2rem] bg-ink p-5 text-cream sm:mt-20 sm:p-8 lg:p-12">
         <div className="mb-10 flex items-end justify-between gap-6 border-b border-cream/20 pb-5">
           <div>
             <p className="mb-3 font-mono text-[9px] uppercase tracking-[0.14em] text-coral">The growth journey</p>
@@ -174,7 +174,7 @@ export function Campaign() {
         </div>
       </div>
 
-      <div className="mt-20 sm:mt-28">
+      <div className="mt-16 sm:mt-20">
         <div className="mb-8 flex items-end justify-between">
           <div>
             <p className="mb-3 font-mono text-[9px] uppercase tracking-[0.14em] text-coral">How I would measure it</p>

@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion'
-import { ArrowUpRight, Check, ChevronLeft, ChevronRight, X } from 'lucide-react'
+import { ArrowUpRight, Check, ChevronLeft, ChevronRight, Code2, X } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
 type Project = {
@@ -187,16 +187,16 @@ export function Projects() {
 
   return (
     <>
-      <section id="projects" className="scroll-mt-24 border-t border-ink/20 py-20 sm:py-28 lg:py-36">
-        <div className="mb-16 flex items-start justify-between gap-6 sm:mb-24">
+      <section id="projects" className="scroll-mt-24 border-t border-ink/20 pb-0 pt-14 sm:pt-16 lg:pt-24">
+        <div className="mb-12 flex items-start justify-between gap-6 sm:mb-16">
           <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-coral">04 / selected work</p>
           <p className="max-w-[11rem] text-right font-mono text-[9px] uppercase leading-[1.4] tracking-[0.12em] text-ink/60">Less talk.<br />More work making.</p>
         </div>
-        <div className="mb-20 grid gap-8 lg:grid-cols-[1fr_0.8fr] lg:items-end lg:gap-16">
+        <div className="mb-14 grid gap-8 lg:grid-cols-[1fr_0.8fr] lg:items-end lg:gap-16">
           <h2 className="font-display text-[clamp(4rem,10vw,10rem)] font-semibold uppercase leading-[0.76]">Less talk,<br /><span className="text-coral">more making.</span></h2>
           <p className="max-w-sm text-lg leading-[1.4] sm:text-xl">A few things I&apos;ve explored, built, and learned from. Open a project when you want the story behind the output.</p>
         </div>
-        <div className="grid gap-x-8 gap-y-16 md:grid-cols-2">
+        <div className="grid gap-x-8 gap-y-12 md:grid-cols-2">
           {projects.map((project, index) => (
             <motion.article
               key={project.number}
@@ -204,7 +204,7 @@ export function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.15 }}
               transition={{ delay: (index % 2) * 0.1, duration: 0.6 }}
-              className={`group ${index % 2 === 1 ? 'md:mt-24' : ''}`}
+              className={`group ${index % 2 === 1 ? 'md:mt-12' : ''}`}
             >
               <button type="button" onClick={() => setActiveProject(index)} className="block w-full text-left">
                 <ProjectVisual project={project} />
@@ -228,9 +228,14 @@ export function Projects() {
             </motion.article>
           ))}
         </div>
-        <div className="mt-20 flex items-center justify-between border-t border-ink/20 pt-5">
+        <div className="mt-14 flex flex-wrap items-center justify-between gap-4 border-t border-ink/20 pt-5">
           <p className="font-mono text-[9px] uppercase tracking-[0.13em] text-ink/55">{projects.length} stories / still becoming</p>
-          <span className="hidden items-center gap-2 font-mono text-[9px] uppercase tracking-[0.13em] sm:flex"><Check size={13} /> built through experiments</span>
+          <div className="flex items-center gap-5">
+            <a href="https://leetcode.com/u/maheshteli07/" target="_blank" rel="noreferrer" className="group flex items-center gap-2 font-mono text-[9px] uppercase tracking-[0.13em] transition-colors hover:text-coral">
+              <Code2 size={13} /> LeetCode / maheshteli07 <ArrowUpRight size={12} className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+            </a>
+            <span className="hidden items-center gap-2 font-mono text-[9px] uppercase tracking-[0.13em] sm:flex"><Check size={13} /> built through experiments</span>
+          </div>
         </div>
       </section>
       <AnimatePresence>

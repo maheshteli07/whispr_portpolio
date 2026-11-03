@@ -11,13 +11,13 @@ const drivers = [
 
 export function Above() {
   return (
-    <section id="above" className="relative scroll-mt-24 border-t border-ink/20 py-20 sm:py-28 lg:py-36">
+    <section id="above" className="relative scroll-mt-24 border-t border-ink/20 py-14 sm:py-16 lg:py-24">
       <div className="absolute right-[8%] top-16 hidden h-20 w-20 rotate-12 items-center justify-center rounded-full border border-ink/20 sm:flex">
         <Sparkles size={16} strokeWidth={1.2} />
         <span className="absolute font-mono text-[8px] uppercase tracking-[0.12em]">a little context</span>
       </div>
 
-      <div className="mb-16 flex items-start justify-between gap-6 sm:mb-24">
+      <div className="mb-12 flex items-start justify-between gap-6 sm:mb-16">
         <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-coral">02 / the person behind the pixels</p>
         <p className="max-w-[10rem] text-right font-mono text-[9px] uppercase leading-[1.4] tracking-[0.12em] text-ink/60">
           Less bio,<br />more hello.
@@ -88,7 +88,7 @@ export function Above() {
         </div>
       </div>
 
-      <div className="mt-28 border-t border-ink/20 pt-6 sm:mt-36">
+      <div className="mt-20 border-t border-ink/20 pt-6 sm:mt-24">
         <div className="mb-8 flex items-end justify-between">
           <h3 className="font-display text-[clamp(2.5rem,5vw,5rem)] font-semibold uppercase leading-[0.85]">
             Things that<br /><span className="text-coral">drive me.</span>

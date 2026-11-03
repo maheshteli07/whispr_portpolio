@@ -30,8 +30,8 @@ const waysOfWorking = [
 
 export function Community() {
   return (
-    <section id="community" className="relative scroll-mt-24 border-t border-ink/20 py-20 sm:py-28 lg:py-36">
-      <div className="mb-16 flex items-start justify-between gap-6 sm:mb-24">
+    <section id="community" className="relative scroll-mt-24 border-t border-ink/20 py-14 sm:py-16 lg:py-24">
+      <div className="mb-12 flex items-start justify-between gap-6 sm:mb-16">
         <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-coral">05 / people make the work</p>
         <p className="max-w-[11rem] text-right font-mono text-[9px] uppercase leading-[1.4] tracking-[0.12em] text-ink/60">
           Ideas get better<br />when they move.
@@ -80,7 +80,7 @@ export function Community() {
         </div>
       </div>
 
-      <div className="mt-24 border-t border-ink/20 pt-6 sm:mt-32">
+      <div className="mt-16 border-t border-ink/20 pt-6 sm:mt-20">
         <div className="mb-8 flex items-end justify-between">
           <h3 className="font-display text-[clamp(2.5rem,5vw,5rem)] font-semibold uppercase leading-[0.82]">
             How I show up<br /><span className="text-coral">with a team.</span>

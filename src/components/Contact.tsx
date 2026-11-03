@@ -13,28 +13,28 @@ const contactLinks = [
   {
     label: 'LinkedIn',
     detail: 'Connect professionally',
-    href: 'https://www.linkedin.com/',
+    href: 'https://www.linkedin.com/in/mahesh-teli-328b28332/',
     icon: Linkedin,
   },
   {
     label: 'GitHub',
     detail: 'See the work in progress',
-    href: 'https://github.com/',
+    href: 'https://github.com/maheshteli07',
     icon: Github,
   },
   {
     label: 'Email',
     detail: 'Start a conversation',
-    href: 'mailto:your-email@example.com',
+    href: 'mailto:maheshteli729@gmail.com',
     icon: Mail,
   },
 ]
 
 export function Contact() {
   return (
-    <section id="contact" className="relative scroll-mt-24 overflow-hidden border-t border-ink/20 py-20 sm:py-28 lg:py-36">
+    <section id="contact" className="relative scroll-mt-24 overflow-hidden border-t border-ink/20 py-14 sm:py-16 lg:py-24">
       <div className="grain absolute inset-0 -z-0 opacity-10" />
-      <div className="relative z-10 mb-16 flex items-start justify-between gap-6 sm:mb-24">
+      <div className="relative z-10 mb-12 flex items-start justify-between gap-6 sm:mb-16">
         <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-coral">09 / the next chapter</p>
         <p className="max-w-[11rem] text-right font-mono text-[9px] uppercase leading-[1.4] tracking-[0.12em] text-ink/60">
           Still writing.<br />Still becoming.
@@ -74,7 +74,7 @@ export function Contact() {
         </motion.div>
       </div>
 
-      <div className="relative z-10 mt-24 border-t border-ink/20 pt-6 sm:mt-36">
+      <div className="relative z-10 mt-16 border-t border-ink/20 pt-6 sm:mt-20">
         <div className="mb-9 flex items-end justify-between">
           <h3 className="font-display text-[clamp(2.8rem,5vw,5rem)] font-semibold uppercase leading-[0.8]">
             What I bring<br /><span className="text-coral">to that table.</span>
@@ -106,7 +106,7 @@ export function Contact() {
         </div>
       </div>
 
-      <div className="relative z-10 mt-24 overflow-hidden rounded-[2rem] bg-ink p-5 text-cream sm:mt-32 sm:p-8 lg:p-12">
+      <div className="relative z-10 mt-16 overflow-hidden rounded-[2rem] bg-ink p-5 text-cream sm:mt-20 sm:p-8 lg:p-12">
         <div className="grain absolute inset-0 opacity-10" />
         <div className="relative">
           <div className="flex items-start justify-between gap-5">
@@ -146,7 +146,7 @@ export function Contact() {
               )
             })}
           </div>
-          <p className="mt-5 font-mono text-[10px] uppercase tracking-[0.1em] text-cream/50">Profile links currently point to their homepages — personalize them in Contact.tsx.</p>
+          <p className="mt-5 font-mono text-[10px] uppercase tracking-[0.1em] text-cream/50">Open to thoughtful collaborations, useful problems, and the next build.</p>
         </div>
       </div>
 
@@ -155,7 +155,7 @@ export function Contact() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
-        className="relative z-10 mt-24 border-y border-ink/20 py-8 text-center sm:mt-36 sm:py-12"
+        className="relative z-10 mt-16 border-y border-ink/20 py-8 text-center sm:mt-20 sm:py-12"
       >
         <motion.p
           animate={{ x: ['-1%', '1%', '-1%'] }}

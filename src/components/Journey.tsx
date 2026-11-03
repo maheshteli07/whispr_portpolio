@@ -68,12 +68,12 @@ export function Journey() {
   }, [])
 
   return (
-    <section ref={sectionRef} id="journey" className="relative scroll-mt-24 border-t border-ink/20 py-16 sm:py-20 lg:py-24">
-      <div className="mb-12 flex items-start justify-between gap-6 sm:mb-16">
+    <section ref={sectionRef} id="journey" className="relative scroll-mt-24 border-t border-ink/20 py-12 sm:py-16 lg:py-20">
+      <div className="mb-10 flex items-start justify-between gap-6 sm:mb-12">
         <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-coral">03 / an evolving story</p>
         <p className="max-w-[11rem] text-right font-mono text-[10px] uppercase leading-[1.4] tracking-[0.1em] text-ink/60">No perfect plan.<br />Just the next experiment.</p>
       </div>
-      <div className="relative mb-14 grid gap-8 lg:grid-cols-[1fr_0.75fr] lg:items-end lg:gap-16">
+      <div className="relative mb-10 grid gap-8 lg:grid-cols-[1fr_0.75fr] lg:items-end lg:gap-16">
         <motion.h2 initial={{ opacity: 0, y: 22 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.6 }} className="font-display text-[clamp(3.5rem,8vw,8rem)] font-semibold uppercase leading-[0.76]">
           Everything<br />started <span className="text-coral">somewhere.</span>
         </motion.h2>
