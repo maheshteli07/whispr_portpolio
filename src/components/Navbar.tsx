@@ -132,12 +132,12 @@ export function Navbar() {
             animate={{ clipPath: 'inset(0 0 0% 0)' }}
             exit={{ clipPath: 'inset(0 0 100% 0)' }}
             transition={{ duration: 0.55, ease: [0.76, 0, 0.24, 1] }}
-            className="fixed inset-0 z-30 flex flex-col justify-end bg-ink px-6 pb-10 pt-28 text-cream sm:px-10"
+            className="fixed inset-0 z-30 flex flex-col justify-start overflow-y-auto bg-ink px-6 pb-8 pt-24 text-cream sm:px-10 sm:pt-28"
           >
             <div className="grain absolute inset-0 opacity-10" />
 
             <div className="relative">
-              <p className="mb-8 font-mono text-[10px] uppercase tracking-[0.16em] text-coral">
+              <p className="mb-6 font-mono text-[10px] uppercase tracking-[0.16em] text-coral">
                 Navigate the archive
               </p>
 
@@ -162,7 +162,7 @@ export function Navbar() {
                 ))}
               </nav>
 
-              <div className="mt-14 flex items-center justify-between border-t border-cream/20 pt-4 font-mono text-[9px] uppercase tracking-[0.13em] text-cream/60">
+              <div className="mt-10 flex items-center justify-between border-t border-cream/20 pt-4 font-mono text-[9px] uppercase tracking-[0.13em] text-cream/60">
                 <span>Mahesh Teli × Creative Technologist</span>
                 <span>mahesh.exe / 2026</span>
               </div>

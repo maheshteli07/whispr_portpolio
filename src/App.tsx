@@ -14,7 +14,7 @@ function App() {
 
   useLayoutEffect(() => {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    const loadingTimer = window.setTimeout(() => setIsLoading(false), prefersReducedMotion ? 0 : 1650)
+    const loadingTimer = window.setTimeout(() => setIsLoading(false), prefersReducedMotion ? 0 : 1200)
     const context = gsap.context(() => {
       if (isLoading || prefersReducedMotion) return
 
@@ -59,7 +59,7 @@ function App() {
             <motion.div
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
-              transition={{ duration: 1.5, ease: [0.76, 0, 0.24, 1] }}
+              transition={{ duration: 1.1, ease: [0.76, 0, 0.24, 1] }}
               className="absolute left-0 right-0 top-1/2 h-px origin-left bg-cream/20"
             />
             <motion.div
@@ -96,7 +96,7 @@ function App() {
                   <motion.div
                     initial={{ x: '-100%' }}
                     animate={{ x: '0%' }}
-                    transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
+                    transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
                     className="h-full w-full origin-left rounded-full bg-coral"
                   />
                 </div>

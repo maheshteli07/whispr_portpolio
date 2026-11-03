@@ -80,6 +80,9 @@ export function Hero() {
       <div className="grain absolute inset-0 -z-0" />
 
       <div className="relative z-10 grid items-start gap-8 py-0 lg:grid-cols-[minmax(0,1.15fr)_minmax(18rem,0.65fr)] lg:gap-10">
+        <div className="relative order-first flex min-h-[15rem] items-center justify-center pt-2 sm:min-h-[18rem] lg:order-last lg:min-h-[25rem] lg:pt-20">
+          <Portrait />
+        </div>
         <div>
           <motion.p
             initial={{ opacity: 0, x: -18 }}
@@ -147,7 +150,7 @@ export function Hero() {
           </motion.div>
         </div>
 
-        <div className="relative flex min-h-[17rem] items-center justify-center pt-10 sm:pt-14 lg:min-h-[25rem] lg:pt-20">
+        <div className="relative hidden min-h-[17rem] items-center justify-center pt-10 sm:pt-14 lg:flex lg:min-h-[25rem] lg:pt-20">
           <motion.p
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
