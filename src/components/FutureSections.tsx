@@ -13,9 +13,7 @@ export function FutureSections() {
       <Above />
       <Journey />
       <Projects />
-      <section id="experiments" className="scroll-mt-24">
-        <Campaign />
-      </section>
+      <Campaign />
       <Community />
       <Lessons />
       <Growth />

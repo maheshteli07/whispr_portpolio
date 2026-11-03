@@ -97,6 +97,8 @@ export function Journey() {
   const sectionRef = useRef<HTMLElement>(null)
 
   useLayoutEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
     const context = gsap.context(() => {
       gsap.fromTo(
         '.journey-progress',

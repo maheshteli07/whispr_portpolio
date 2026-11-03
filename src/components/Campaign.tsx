@@ -74,7 +74,7 @@ export function Campaign() {
   const Icon = stage.icon
 
   return (
-    <section id="campaign" className="relative scroll-mt-24 border-t border-ink/20 py-20 sm:py-28 lg:py-36">
+    <section id="experiments" className="relative scroll-mt-24 border-t border-ink/20 py-20 sm:py-28 lg:py-36">
       <div className="mb-16 flex items-start justify-between gap-6 sm:mb-24">
         <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-coral">08 / growth theater</p>
         <p className="max-w-[12rem] text-right font-mono text-[9px] uppercase leading-[1.4] tracking-[0.12em] text-ink/60">
