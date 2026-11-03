@@ -75,8 +75,8 @@ export function Campaign() {
   const Icon = stage.icon
 
   return (
-    <section id="experiments" className="relative scroll-mt-24 border-t border-ink/20 py-14 sm:py-16 lg:py-24">
-      <div className="mb-12 flex items-start justify-between gap-6 sm:mb-16">
+    <section id="experiments" className="relative scroll-mt-24 border-t border-ink/20 py-8 sm:py-16 lg:py-24">
+      <div className="mb-8 flex items-start justify-between gap-6 sm:mb-16">
         <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-coral">
           08 / growth experiment
         </p>
@@ -85,7 +85,7 @@ export function Campaign() {
         </p>
       </div>
 
-      <div className="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-end lg:gap-20">
+      <div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-end lg:gap-20">
         <div>
           <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.16em] text-coral">
             Wispr Flow × Indian college students
@@ -138,8 +138,8 @@ export function Campaign() {
         </motion.div>
       </div>
 
-      <div className="mt-16 rounded-[2rem] bg-ink p-5 text-cream sm:mt-20 sm:p-8 lg:p-12">
-        <div className="mb-10 flex items-end justify-between gap-6 border-b border-cream/20 pb-5">
+      <div className="mt-10 rounded-[2rem] bg-ink p-4 text-cream sm:mt-20 sm:p-8 lg:p-12">
+        <div className="mb-6 flex items-end justify-between gap-6 border-b border-cream/20 pb-4 sm:mb-10 sm:pb-5">
           <div>
             <p className="mb-3 font-mono text-[9px] uppercase tracking-[0.14em] text-coral">
               The growth journey
@@ -155,7 +155,7 @@ export function Campaign() {
           </p>
         </div>
 
-        <div className="grid gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:gap-14">
+        <div className="grid gap-5 lg:grid-cols-[0.72fr_1.28fr] lg:gap-14">
           <div className="flex flex-col">
             {stages.map((item, index) => {
               const StageIcon = item.icon
@@ -189,7 +189,7 @@ export function Campaign() {
             })}
           </div>
 
-          <div className="relative min-h-[22rem] overflow-hidden rounded-[1.5rem] border border-cream/15 bg-cream p-6 text-ink sm:p-9">
+          <div className="relative min-h-[18rem] overflow-hidden rounded-[1.5rem] border border-cream/15 bg-cream p-5 text-ink sm:min-h-[22rem] sm:p-9">
             <AnimatePresence mode="wait">
               <motion.div
                 key={stage.number}
@@ -209,11 +209,11 @@ export function Campaign() {
                   </span>
                 </div>
 
-                <h4 className="mt-12 max-w-xl font-display text-[clamp(2.5rem,5vw,5rem)] font-semibold uppercase leading-[0.8]">
+                <h4 className="mt-6 max-w-xl font-display text-[clamp(2.5rem,5vw,5rem)] font-semibold uppercase leading-[0.8] sm:mt-12">
                   {stage.title}
                 </h4>
 
-                <p className="mt-6 max-w-2xl text-base leading-[1.45] text-ink/75 sm:text-lg">
+                <p className="mt-4 max-w-2xl text-base leading-[1.45] text-ink/75 sm:mt-6 sm:text-lg">
                   {stage.copy}
                 </p>
 
@@ -232,8 +232,8 @@ export function Campaign() {
         </div>
       </div>
 
-      <div className="mt-16 sm:mt-20">
-        <div className="mb-8 flex items-end justify-between">
+      <div className="mt-10 sm:mt-20">
+        <div className="mb-5 flex items-end justify-between sm:mb-8">
           <div>
             <p className="mb-3 font-mono text-[9px] uppercase tracking-[0.14em] text-coral">
               How I would measure it
@@ -257,9 +257,9 @@ export function Campaign() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ delay: index * 0.07 }}
-              className="border-b border-ink/20 py-5 sm:border-b-0 sm:border-r sm:px-4 sm:py-6 sm:first:pl-0 sm:last:border-r-0"
+              className="border-b border-ink/20 py-3 sm:border-b-0 sm:border-r sm:px-4 sm:py-6 sm:first:pl-0 sm:last:border-r-0"
             >
-              <div className="mb-10 flex items-center justify-between">
+              <div className="mb-6 flex items-center justify-between sm:mb-10">
                 <span className="font-mono text-[9px] text-ink/50">
                   0{index + 1}
                 </span>
@@ -275,7 +275,7 @@ export function Campaign() {
                 {label}
               </h4>
 
-              <p className="mt-3 text-sm leading-[1.4] text-ink/65">
+              <p className="mt-2 text-sm leading-[1.4] text-ink/65 sm:mt-3">
                 {description}
               </p>
             </motion.div>
