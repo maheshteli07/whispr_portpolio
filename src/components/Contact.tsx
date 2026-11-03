@@ -146,7 +146,7 @@ export function Contact() {
               )
             })}
           </div>
-          <p className="mt-5 font-mono text-[8px] uppercase tracking-[0.1em] text-cream/40">Profile links currently point to their homepages — personalize them in Contact.tsx.</p>
+          <p className="mt-5 font-mono text-[10px] uppercase tracking-[0.1em] text-cream/50">Profile links currently point to their homepages — personalize them in Contact.tsx.</p>
         </div>
       </div>
 

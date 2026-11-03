@@ -64,6 +64,8 @@ a {
 
 .hero-ticker {
   animation: ticker 24s linear infinite;
+  min-width: max-content;
+  will-change: transform;
 }
 
 @keyframes ticker {
@@ -127,6 +129,16 @@ a {
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+  }
+
+  @media (max-width: 640px) {
+    .font-mono {
+      letter-spacing: 0.08em;
+    }
+
+    .hero-ticker {
+      animation-duration: 30s;
+    }
   }
 
   .site-loader {

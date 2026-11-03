@@ -2,9 +2,7 @@ import { Above } from './Above'
 import { Campaign } from './Campaign'
 import { Community } from './Community'
 import { Contact } from './Contact'
-import { Growth } from './Growth'
 import { Journey } from './Journey'
-import { Lessons } from './Lessons'
 import { Projects } from './Projects'
 
 export function FutureSections() {
@@ -15,8 +13,6 @@ export function FutureSections() {
       <Projects />
       <Campaign />
       <Community />
-      <Lessons />
-      <Growth />
       <Contact />
     </div>
   )
