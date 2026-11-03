@@ -107,8 +107,8 @@ export function Above() {
         </div>
       </div>
 
-      <div className="mt-20 border-t border-ink/20 pt-6 sm:mt-24">
-        <div className="mb-8 flex items-end justify-between">
+      <div className="mt-12 border-t border-ink/20 pt-4 sm:mt-24 sm:pt-6">
+        <div className="mb-5 flex items-end justify-between sm:mb-8">
           <h3 className="font-display text-[clamp(2.5rem,5vw,5rem)] font-semibold uppercase leading-[0.85]">
             Things that<br /><span className="text-coral">drive me.</span>
           </h3>
@@ -125,18 +125,18 @@ export function Above() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ delay: index * 0.08 }}
-              className="group border-b border-ink/20 py-5 sm:border-b-0 sm:border-r sm:px-4 sm:py-6 sm:first:pl-0 sm:last:border-r-0"
+              className="group border-b border-ink/20 py-3 sm:border-b-0 sm:border-r sm:px-4 sm:py-6 sm:first:pl-0 sm:last:border-r-0"
             >
-              <div className="mb-12 flex items-center justify-between font-mono text-[9px] text-ink/50">
+              <div className="mb-6 flex items-center justify-between font-mono text-[9px] text-ink/50 sm:mb-12">
                 <span>{driver.number}</span>
                 <span className="h-2 w-2 rounded-full bg-lime transition-transform duration-300 group-hover:scale-[2]" />
               </div>
 
-              <h4 className="font-display text-3xl font-semibold uppercase leading-[0.85] transition-transform duration-300 group-hover:-translate-y-1">
+              <h4 className="font-display text-2xl font-semibold uppercase leading-[0.85] transition-transform duration-300 group-hover:-translate-y-1 sm:text-3xl">
                 {driver.label}
               </h4>
 
-              <p className="mt-3 font-mono text-[9px] uppercase tracking-[0.08em] text-ink/60">
+              <p className="mt-2 font-mono text-[9px] uppercase tracking-[0.08em] text-ink/60 sm:mt-3">
                 {driver.detail}
               </p>
             </motion.div>
