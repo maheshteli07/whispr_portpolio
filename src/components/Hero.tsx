@@ -2,33 +2,19 @@ import { motion, useMotionValue, useSpring } from 'framer-motion'
 import { ArrowDownRight, ArrowUpRight, MoveUpRight } from 'lucide-react'
 import { MouseEvent, useRef } from 'react'
 
-function FloatingCharacter() {
+function Portrait() {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.75, rotate: -12 }}
       animate={{ opacity: 1, scale: 1, rotate: 5 }}
       transition={{ delay: 0.65, duration: 0.8, type: 'spring', bounce: 0.35 }}
-      className="hero-character relative h-[min(56vw,25rem)] w-[min(56vw,25rem)]"
-      aria-hidden="true"
+      className="hero-portrait relative h-[min(68vw,27rem)] w-[min(68vw,27rem)]"
     >
-      <motion.div
-        animate={{ y: [-8, 8, -8], rotate: [5, 1, 5] }}
-        transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
-        className="absolute inset-[8%] rounded-[42%_58%_58%_42%] border-2 border-ink bg-lime"
-      >
-        <span className="absolute left-[27%] top-[35%] h-4 w-4 rounded-full bg-ink sm:h-5 sm:w-5" />
-        <span className="absolute right-[25%] top-[31%] h-4 w-4 rounded-full bg-ink sm:h-5 sm:w-5" />
-        <span className="absolute bottom-[25%] left-1/2 h-10 w-16 -translate-x-1/2 rounded-[0_0_2rem_2rem] border-b-2 border-ink sm:h-12 sm:w-20" />
-        <span className="absolute -left-[7%] top-[18%] h-8 w-12 -rotate-45 rounded-full border-2 border-ink bg-coral sm:h-10 sm:w-16" />
-        <span className="absolute -right-[6%] bottom-[20%] h-8 w-12 rotate-45 rounded-full border-2 border-ink bg-coral sm:h-10 sm:w-16" />
-      </motion.div>
-      <motion.span
-        animate={{ rotate: [0, 360] }}
-        transition={{ duration: 18, repeat: Infinity, ease: 'linear' }}
-        className="absolute right-0 top-[8%] flex h-12 w-12 items-center justify-center rounded-full border border-ink bg-cream font-mono text-[8px] uppercase leading-[1.1] text-center sm:h-16 sm:w-16"
-      >
-        idea<br />in motion
-      </motion.span>
+      <div className="absolute inset-[5%] overflow-hidden rounded-[45%_55%_48%_52%] border-2 border-ink bg-coral">
+        <img src="/mahesh-portrait.png" alt="Mahesh Basavaraj Teli" className="h-full w-full object-cover object-center grayscale-[15%]" />
+      </div>
+      <span className="absolute bottom-[5%] left-0 rounded-pill border border-ink bg-cream px-3 py-2 font-mono text-[8px] uppercase tracking-[0.1em]">the person behind the pixels</span>
+      <span className="absolute right-0 top-[5%] flex h-12 w-12 items-center justify-center rounded-full border border-ink bg-ink font-mono text-[8px] uppercase leading-[1.1] text-center text-cream sm:h-16 sm:w-16">idea<br />in motion</span>
     </motion.div>
   )
 }
@@ -152,7 +138,7 @@ export function Hero() {
           >
             Making ideas<br />a little more real<br />since day one.
           </motion.p>
-          <FloatingCharacter />
+          <Portrait />
           <motion.span
             initial={{ opacity: 0, rotate: -30 }}
             animate={{ opacity: 1, rotate: -12 }}
