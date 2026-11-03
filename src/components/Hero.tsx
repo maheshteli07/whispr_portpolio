@@ -3,7 +3,7 @@ import { ArrowDownRight, MousePointer2 } from 'lucide-react'
 
 export function Hero() {
   return (
-    <section className="hero relative flex min-h-[calc(100vh-76px)] flex-col justify-between px-5 pb-8 pt-14 sm:px-8 lg:px-12 lg:pt-20">
+    <section id="home" className="hero scroll-mt-24 relative flex min-h-[calc(100vh-76px)] flex-col justify-between px-5 pb-8 pt-14 sm:px-8 lg:px-12 lg:pt-20">
       <div className="hero-grid pointer-events-none absolute inset-x-0 top-0 -z-0 h-[78%] opacity-40 [background-image:linear-gradient(to_right,#17171712_1px,transparent_1px),linear-gradient(to_bottom,#17171712_1px,transparent_1px)] [background-size:80px_80px] [mask-image:linear-gradient(to_bottom,black,transparent)]" />
       <div className="grain absolute inset-0 -z-0" />
 

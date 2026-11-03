@@ -28,7 +28,7 @@ function App() {
   }, [])
 
   return (
-    <div ref={appRef} className="min-h-screen overflow-hidden bg-cream text-ink">
+    <div ref={appRef} className="min-h-screen overflow-x-hidden bg-cream text-ink">
       <Navbar />
       <main>
         <Hero />

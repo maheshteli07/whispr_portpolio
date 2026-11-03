@@ -45,3 +45,18 @@ a {
   opacity: 0.18;
   pointer-events: none;
 }
+
+.nav-link::after {
+  position: absolute;
+  bottom: -0.15rem;
+  left: 0;
+  height: 1px;
+  width: 0;
+  background: currentColor;
+  content: '';
+  transition: width 300ms ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
