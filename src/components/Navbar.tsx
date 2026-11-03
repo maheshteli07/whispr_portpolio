@@ -1,3 +1,4 @@
+
 import { AnimatePresence, motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import { useEffect, useState } from 'react'
@@ -11,7 +12,10 @@ const links = [
 ]
 
 function scrollToSection(href: string) {
-  document.querySelector(href)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  document.querySelector(href)?.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start',
+  })
 }
 
 export function Navbar() {
@@ -23,11 +27,13 @@ export function Navbar() {
 
     handleScroll()
     window.addEventListener('scroll', handleScroll, { passive: true })
+
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? 'hidden' : ''
+
     return () => {
       document.body.style.overflow = ''
     }
@@ -42,26 +48,28 @@ export function Navbar() {
     <>
       <header
         className={`sticky top-0 z-40 px-4 py-3 transition-all duration-500 sm:px-7 lg:px-10 ${
-          isScrolled ? 'bg-cream/90 py-2 backdrop-blur-md' : 'bg-transparent'
+          isScrolled
+            ? 'bg-cream/90 py-2 backdrop-blur-md'
+            : 'bg-transparent'
         }`}
       >
-        <div className="mx-auto flex max-w-[1600px] items-center justify-between rounded-pill border border-ink/15 px-4 py-2.5 sm:px-5">
+        <div className="mx-auto flex max-w-[1600px] items-center justify-between rounded-pill border border-ink/20 px-4 py-3 sm:px-6 sm:py-3.5">
           <button
             type="button"
             onClick={() => handleLinkClick('#home')}
-            className="group font-mono text-[10px] font-medium uppercase tracking-[0.18em]"
+            className="group font-mono text-[12px] font-semibold uppercase tracking-[0.16em]"
           >
             mahesh<span className="text-coral">.</span>exe
             <span className="ml-2 inline-block h-px w-0 bg-ink align-middle transition-all duration-300 group-hover:w-5" />
           </button>
 
-          <nav className="hidden items-center gap-6 lg:flex">
+          <nav className="hidden items-center gap-7 lg:flex">
             {links.map((link) => (
               <button
                 key={link.href}
                 type="button"
                 onClick={() => handleLinkClick(link.href)}
-                className="nav-link relative py-1 font-mono text-[9px] uppercase tracking-[0.14em] transition-opacity hover:opacity-60"
+                className="nav-link relative py-2 font-mono text-[11px] font-medium uppercase tracking-[0.1em] transition-opacity hover:opacity-60"
               >
                 {link.label}
               </button>
@@ -70,33 +78,47 @@ export function Navbar() {
 
           <div className="flex items-center gap-3">
             <div className="hidden items-center gap-2 sm:flex">
-              <span className="font-mono text-[9px] uppercase tracking-[0.12em]">Mahesh Teli</span>
+              <span className="font-mono text-[10px] font-medium uppercase tracking-[0.1em]">
+                Mahesh Teli
+              </span>
               <span className="text-ink/30">×</span>
-              <span className="font-display text-sm font-semibold uppercase tracking-[-0.06em]">Canto</span>
+              <span className="font-display text-base font-semibold uppercase tracking-[-0.06em]">
+                Creative Technologist
+              </span>
             </div>
+
             <a
               href="#contact"
               onClick={(event) => {
                 event.preventDefault()
                 handleLinkClick('#contact')
               }}
-              className="group flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-ink/20 bg-lime text-center font-mono text-[7px] uppercase leading-[1.05] tracking-[0.04em] transition-transform hover:-translate-y-0.5 sm:h-14 sm:w-14 sm:text-[8px]"
+              className="group flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-ink/25 bg-lime text-center font-mono text-[8px] font-medium uppercase leading-[1.1] tracking-[0.03em] transition-transform hover:-translate-y-0.5 sm:h-[4.5rem] sm:w-[4.5rem] sm:text-[9px]"
             >
-              <span className="relative flex h-1.5 w-1.5">
+              <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-ink opacity-50" />
-                <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-ink" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-ink" />
               </span>
-              <span className="ml-1">Open to<br />opportunities</span>
+              <span className="ml-1">
+                Open to
+                <br />
+                opportunities
+              </span>
             </a>
+
             <button
               type="button"
               aria-expanded={isMenuOpen}
               aria-controls="mobile-menu"
               aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
               onClick={() => setIsMenuOpen((open) => !open)}
-              className="flex h-8 w-8 items-center justify-center rounded-full border border-ink/20 lg:hidden"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-ink/25 lg:hidden"
             >
-              {isMenuOpen ? <X size={15} strokeWidth={1.5} /> : <Menu size={15} strokeWidth={1.5} />}
+              {isMenuOpen ? (
+                <X size={19} strokeWidth={1.5} />
+              ) : (
+                <Menu size={19} strokeWidth={1.5} />
+              )}
             </button>
           </div>
         </div>
@@ -113,8 +135,12 @@ export function Navbar() {
             className="fixed inset-0 z-30 flex flex-col justify-end bg-ink px-6 pb-10 pt-28 text-cream sm:px-10"
           >
             <div className="grain absolute inset-0 opacity-10" />
+
             <div className="relative">
-              <p className="mb-8 font-mono text-[10px] uppercase tracking-[0.16em] text-coral">Navigate the archive</p>
+              <p className="mb-8 font-mono text-[10px] uppercase tracking-[0.16em] text-coral">
+                Navigate the archive
+              </p>
+
               <nav className="flex flex-col items-start">
                 {links.map((link, index) => (
                   <motion.button
@@ -126,13 +152,18 @@ export function Navbar() {
                     onClick={() => handleLinkClick(link.href)}
                     className="group flex items-baseline gap-3 font-display text-[clamp(3rem,13vw,6rem)] font-semibold uppercase leading-[0.9]"
                   >
-                    <span className="font-mono text-[10px] font-normal text-coral">0{index + 1}</span>
-                    <span className="transition-colors group-hover:text-lime">{link.label}</span>
+                    <span className="font-mono text-[10px] font-normal text-coral">
+                      0{index + 1}
+                    </span>
+                    <span className="transition-colors group-hover:text-lime">
+                      {link.label}
+                    </span>
                   </motion.button>
                 ))}
               </nav>
+
               <div className="mt-14 flex items-center justify-between border-t border-cream/20 pt-4 font-mono text-[9px] uppercase tracking-[0.13em] text-cream/60">
-                <span>Mahesh Teli × Canto</span>
+                <span>Mahesh Teli × Creative Technologist</span>
                 <span>mahesh.exe / 2026</span>
               </div>
             </div>

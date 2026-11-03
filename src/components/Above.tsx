@@ -1,12 +1,13 @@
+
 import { motion } from 'framer-motion'
 import { ArrowDownRight, Heart, Sparkles } from 'lucide-react'
 
 const drivers = [
-  { number: '01', label: 'Curiosity', detail: 'Keep asking why.' },
-  { number: '02', label: 'Creativity', detail: 'Find another angle.' },
-  { number: '03', label: 'Experimentation', detail: 'Learn by making.' },
-  { number: '04', label: 'Technology', detail: 'Turn possibility real.' },
-  { number: '05', label: 'People', detail: 'Build it together.' },
+  { number: '01', label: 'Curiosity', detail: 'Always asking why.' },
+  { number: '02', label: 'Creativity', detail: 'Seeing beyond the obvious.' },
+  { number: '03', label: 'Experimentation', detail: 'Learning by building.' },
+  { number: '04', label: 'Technology', detail: 'Turning ideas into reality.' },
+  { number: '05', label: 'People', detail: 'Growing and building together.' },
 ]
 
 export function Above() {
@@ -18,7 +19,9 @@ export function Above() {
       </div>
 
       <div className="mb-12 flex items-start justify-between gap-6 sm:mb-16">
-        <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-coral">02 / the person behind the pixels</p>
+        <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-coral">
+          02 / the person behind the pixels
+        </p>
         <p className="max-w-[10rem] text-right font-mono text-[9px] uppercase leading-[1.4] tracking-[0.12em] text-ink/60">
           Less bio,<br />more hello.
         </p>
@@ -41,6 +44,7 @@ export function Above() {
               </p>
             </div>
           </motion.div>
+
           <motion.span
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -48,7 +52,7 @@ export function Above() {
             transition={{ delay: 0.4 }}
             className="absolute -bottom-5 left-[8%] rounded-pill border border-ink bg-lime px-3 py-2 font-mono text-[9px] uppercase tracking-[0.1em]"
           >
-            currently curious
+            always exploring
           </motion.span>
         </div>
 
@@ -64,6 +68,7 @@ export function Above() {
             <br />
             behind the <span className="text-coral">pixels.</span>
           </motion.h2>
+
           <motion.div
             initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -72,15 +77,29 @@ export function Above() {
             className="mt-10 max-w-2xl space-y-5 text-lg leading-[1.45] sm:text-xl"
           >
             <p>
-              Hi, I&apos;m <span className="rounded bg-lime px-1">Mahesh Basavaraj Teli</span> — a computer science and engineering student finding my way through artificial intelligence and machine learning.
+              Hey, I&apos;m <span className="rounded bg-lime px-1">Mahesh Basavaraj Teli</span>,
+              a Computer Science and Engineering student specializing in
+              Artificial Intelligence and Machine Learning at Siddaganga
+              Institute of Technology.
             </p>
+
             <p>
-              I like exploring technology, building projects, trying ideas before they feel ready, and working with people who make the process more interesting.
+              I enjoy exploring technology, building meaningful projects,
+              experimenting with new ideas, and turning challenges into
+              opportunities to learn. Whether it&apos;s developing a web
+              application, exploring AI, or bringing an idea to life, I love
+              being part of the process.
             </p>
+
             <p>
-              But programming is only one part of the picture. I&apos;m equally drawn to creativity, marketing, storytelling, and community — to that magic moment when an idea finds the people it was meant for.
+              Beyond code, I&apos;m interested in creativity, growth,
+              storytelling, and community building. Being part of student
+              communities and collaborative projects has taught me that great
+              ideas become even more powerful when people come together to
+              make them happen.
             </p>
           </motion.div>
+
           <a href="#journey" className="group mt-10 inline-flex items-center gap-3 border-b border-ink pb-2 font-mono text-[10px] uppercase tracking-[0.14em]">
             Get to know the journey
             <ArrowDownRight size={15} strokeWidth={1.5} className="transition-transform group-hover:translate-x-1 group-hover:translate-y-1" />
@@ -97,6 +116,7 @@ export function Above() {
             Five forces behind<br />the way I think & make.
           </p>
         </div>
+
         <div className="grid border-t border-ink/20 sm:grid-cols-5">
           {drivers.map((driver, index) => (
             <motion.div
@@ -111,10 +131,14 @@ export function Above() {
                 <span>{driver.number}</span>
                 <span className="h-2 w-2 rounded-full bg-lime transition-transform duration-300 group-hover:scale-[2]" />
               </div>
+
               <h4 className="font-display text-3xl font-semibold uppercase leading-[0.85] transition-transform duration-300 group-hover:-translate-y-1">
                 {driver.label}
               </h4>
-              <p className="mt-3 font-mono text-[9px] uppercase tracking-[0.08em] text-ink/60">{driver.detail}</p>
+
+              <p className="mt-3 font-mono text-[9px] uppercase tracking-[0.08em] text-ink/60">
+                {driver.detail}
+              </p>
             </motion.div>
           ))}
         </div>
